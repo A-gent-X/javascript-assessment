@@ -49,10 +49,19 @@ console.log(greetUser('Welcome Back, Xavier'))
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+//creating a function containing a conditional that provides delivery instructions
+function canWeDeliver(zipcode){
+    if (zipcode === include.deliveryAreaZipCodes(8))
+    return 'You are eligible for delivery' 
+    else if (zipcode !== zipcode.length){
+    return 'Sorry, we can\'t deliver to that address'
+    }
+
+}
+
 
 
 
@@ -74,7 +83,9 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+for (let i = 0; i < canWeDeliver.length; i++){
 
+}
 
 //////////////////PROBLEM 3////////////////////
 /* 

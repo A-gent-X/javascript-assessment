@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: 'Atlantic Salmon, and Cavier Pizza',
+    price: 29.99,
+    category: 'Pacific Rim Cuisine',
+    popularity: 3,
+    rating: 5,
+    tags: ['Salmon', 'Cavier', 'Fetti', 'Spinach', 'Waterchestnuts']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,8 +60,8 @@
 */
 
 //CODE HERE
-
-
+newPizza = pizza.tags['Scallops']
+console.log(newPizza)
 /*
     Third, destructure the price off of the
     pizza object.

@@ -35,9 +35,9 @@ let pizza = {
     name: 'Atlantic Salmon, and Cavier Pizza',
     price: 29.99,
     category: 'Pacific Rim Cuisine',
-    popularity: 3,
-    rating: 5,
-    tags: ['Salmon', 'Cavier', 'Fetti', 'Spinach', 'Waterchestnuts']
+    popularity: 'voted top: three in the region',
+    rating: 'rating 4 out of 5 stars in overall taste',
+    tags: ['deepdish', 'specialty', 'fresh ingredients', 'gluten free'],
 }
 
 
@@ -50,7 +50,12 @@ let pizza = {
 */
 
 //CODE HERE
-console.log(pizza)
+// console.log(pizza.name)
+// console.log(pizza.price)
+// console.log(pizza.category)
+// console.log(pizza.popularity)
+// console.log(pizza.rating)
+// console.log(pizza.tags)
 
 /*
     Second, log the second tag in your pizza's
@@ -60,8 +65,8 @@ console.log(pizza)
 */
 
 //CODE HERE
-newPizza = pizza.tags['Scallops']
-console.log(newPizza)
+pizza.tags.push('Scallops')
+// console.log(pizza.tags)
 /*
     Third, destructure the price off of the
     pizza object.
@@ -70,7 +75,9 @@ console.log(newPizza)
 */
 
 //CODE HERE
-
+let {price: newPrice} = pizza
+newPrice = 19.95
+console.log(newPrice)
 
 /*
     Fourth, and last, destructure the category
@@ -80,7 +87,9 @@ console.log(newPizza)
 */
 
 //CODE HERE
-
+let {category: PacificRim} = pizza
+PacificRim = 'Sea Food Pizza'
+console.log(PacificRim)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -95,7 +104,7 @@ console.log(newPizza)
 */
 
 //CODE HERE
-
+let foodArr = [39.95, 'no 1', '5 star', 'gluten free']
 
 
 //////////////////PROBLEM 4////////////////////
@@ -111,8 +120,15 @@ console.log(newPizza)
 */
 
 //CODE HERE
+const foodcyle = (cycle) => {
+    return cycle.length > foodArr.length
+}
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(foodcyle)
+
+    console.log(filteredFood)
+
+
 
 
 

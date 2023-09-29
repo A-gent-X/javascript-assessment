@@ -172,6 +172,13 @@ const filteredFood = foodArr.filter(foodcyle)
 */
 
 //CODE HERE
+let filterByProperty = (property, number, type) => {
+    return property = "rating, popularity or price";
+    return number = number >= num;
+    return num = 7;
+    return type = type(above, below)
+    let filterItems = foodArr.filter()
+}
 
 
 /*

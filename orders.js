@@ -30,8 +30,21 @@
 */
 
 //CODE HERE
+class Ticket{
+    constructor(items, orderTime, customerId, status){
+        this.status = status
+        this.status = 'queued'
+        this.customerId = customerId
 
-
+    }
+    updateStatus(newStatus){
+        return newStatus
+    }
+}
+ 
+Ticket('Darrel Dixon')
+updateStatus( 'Derrick Patterson')
+console.log(`The order for customer ${customerId} is now ${newStatus}`)
 
 /*
     Create a new instance of your class.

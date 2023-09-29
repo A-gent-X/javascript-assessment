@@ -34,14 +34,15 @@ const cart = [
 ]
 
 //CODE HERE
-let cartReduction = cart.reduce((acc, cur) => acc + cur)
 
-console.log(cart)
+let reduceCart = cart.reduce((acc, cur) => acc + cur.price, cart.length)
+
 
 
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = reduceCart
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -59,9 +60,13 @@ console.log(cart)
 */
 
 //CODE HERE
+let calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let cartTotal = summedPrice + tax - couponValue
+    return cartTotal
+}
 
-
-
+calcFinalPrice(summedPrice, 5.37, .06)
+console(cartTotal)
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -84,7 +89,16 @@ console.log(cart)
 
 /*
     TEXT ANSWER HERE
-
+    What I believe most restaurant would ask for to fully accomodate visiting customers.
+    let customerInfo =
+    {
+        name: "determined upon response",
+        foodallergy: "determined upon request",
+        reservations:   "determined upon request",
+        numberofguest: "determined upon request",
+        specialrequest: "anniversies or birthdays",
+        specialseating: "to accomadate for handicapped customers"
+    }
 */
 
 /*
@@ -93,3 +107,12 @@ console.log(cart)
 */
 
 //CODE HERE
+let customer =
+{
+    name: "Jon Majors",
+    foodallergy: "shellfish",
+    reservations:   "a reservation was made",
+    numberofguest: 2,
+    specialrequest: "anniversary",
+    specialseating: "handicapped wife"
+}

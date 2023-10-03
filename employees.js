@@ -22,13 +22,12 @@
 //CODE HERE
 class Employee{
     constructor(name, shifts){
-    this.name
-    this.shifts
-
-        Schedule.get()
-        console.log(this.name + 'works on' + this.shifts`)
+        this.name = name;
+        this.shifts = shifts;
     }
-}
+    getSchedule = () => `${this.name} works on ${this.shifts}`;
+    
+    }
 
 /*
     Create a new instance of your class.
@@ -42,8 +41,7 @@ class Employee{
 
 //CODE HERE
 let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
-console.log(empOne)
-
+// console.log(empOne);
 
 
 /*
@@ -52,9 +50,8 @@ console.log(empOne)
 */
 
 //CODE HERE
+empOne.getSchedule('Rick', 'weekdays')
 
-let renderSchedule = get.Schedule('Dan', 'weekend mornings')
-console.log(renderSchedule)
 
 
 /*
@@ -70,10 +67,9 @@ console.log(renderSchedule)
 */
 
 //CODE HERE
-let emTwo = new emOne('Nick', 'shift: on standby')
-console.log(emTwo)
-
-
+let {...name} = empOne;
+empTwo = empOne;
+console.log(empTwo)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a class called Manager that *extends* 
@@ -98,22 +94,19 @@ console.log(emTwo)
 */
 
 //CODE HERE
+
 class Manager extends Employee{
     constructor(name, shifts, employees){
-    super(name, shifts)
-    this.name = name
-    this.shifts = shifts
-    this.employees = employees
+        super(name, shifts)
+        this.name = name;
+        this.shifts = shifts;
+        this.employees = employees;
 
-        get.employees()
-        console.log(`${name} manages ${employees}`)
+    getEmployees = () => console.log(`${this.name} manages ${this.employees}`);
+    addEmployee = (emp) => this.name.push(Manager(employees['']));
 
-        add.employees(emp)
-        emp = name.push('')
     }
 }
-
-
 
 
 /*
@@ -128,8 +121,8 @@ class Manager extends Employee{
 */
 
 //CODE HERE
-let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Cece and Schmidt')
-
+let manager = new Manager('Wiston', 'weekday mornings, weekday afternoons', 'Cece and Schmidt')
+console.log(manager);
 
 /*
     Call the `getEmployees` method on the
@@ -137,8 +130,7 @@ let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Ce
 */
 
 //CODE HERE
-get.employees(emp)
-console.log(manager)
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -146,8 +138,7 @@ console.log(manager)
 */
 
 //CODE HERE 
-add.employees(emp)
-console.log(manager)
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -155,5 +146,4 @@ console.log(manager)
 */
 
 //CODE HERE
-add.employees(emp)
-console.log(manager)
+manager.getEmployees('Coach')

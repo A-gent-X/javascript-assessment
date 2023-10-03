@@ -22,9 +22,9 @@
 */
 
 //CODE HERE
-const greetUser = (username) => username 
+// const greetUser = (username) => username 
 
-console.log(greetUser('Welcome Back, Xavier'))
+// console.log(greetUser('Welcome Back, Xavier'))
 
 
 
@@ -49,18 +49,18 @@ console.log(greetUser('Welcome Back, Xavier'))
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 //creating a function containing a conditional that provides delivery instructions
-function canWeDeliver(zipcode){
-    if (zipcode === include.deliveryAreaZipCodes(8))
-    return 'You are eligible for delivery' 
-    else if (zipcode !== zipcode.length){
-    return 'Sorry, we can\'t deliver to that address'
-    }
+// function canWeDeliver(zipcode){
+//     if (zipcode === deliveryAreaZipCodes.include(8))
+//     return 'You are eligible for delivery' 
+//     else if (zipcode !== zipcode.length){
+//     return 'Sorry, we can\'t deliver to that address'
+//     }
 
-}
+// }
 
 
 
@@ -83,9 +83,9 @@ function canWeDeliver(zipcode){
 */
 
 // CODE HERE
-for (let i = 0; i < canWeDeliver.length; i++){
+// for (let i = 0; i < canWeDeliver.length; i++){
 
-}
+// }
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -121,7 +121,8 @@ const deals = [
 */
 
 //CODE HERE
-
+let newDeals = deals.replaceAll(/15/g, 10)
+console.log(newDeals)
 
 
 /*
@@ -138,3 +139,5 @@ const deals = [
 */
 
 //CODE HERE
+let changeMonth = deals.replaceAll(/March/g, 'April')
+console.log(changeMonth)

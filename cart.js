@@ -35,14 +35,15 @@ const cart = [
 
 //CODE HERE
 
-let reduceCart = cart.reduce((acc, cur) => acc + cur.price, cart.length)
-
+let reduceCart = cart.reduce((acc, cur) => acc + cur.price, cart.length);
+console.log(reduceCart);
 
 
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-const summedPrice = reduceCart
-console.log(summedPrice)
+const summedPrice = reduceCart;
+console.log(summedPrice);
+
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -59,14 +60,16 @@ console.log(summedPrice)
     decimals, for example: .06 for a 6% tax.
 */
 
+
 //CODE HERE
 let calcFinalPrice = (cartTotal, couponValue, tax) => {
-    let cartTotal = summedPrice + tax - couponValue
-    return cartTotal
+    return finalPrice = cartTotal * tax - couponValue;
 }
 
-calcFinalPrice(summedPrice, 5.37, .06)
-console(cartTotal)
+finalNumber = calcFinalPrice(49, 0.06, 7)
+console.log(finalNumber)
+
+
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -99,7 +102,7 @@ console(cartTotal)
         specialrequest: "anniversies or birthdays",
         specialseating: "to accomadate for handicapped customers"
     }
-*/
+
 
 /*
     Now, create a customer object following your own
@@ -116,3 +119,6 @@ let customer =
     specialrequest: "anniversary",
     specialseating: "handicapped wife"
 }
+
+let {name, foodallergy, reservations, numberofguest, specialrequest, specialseating} = customer;
+console.log(customer); 

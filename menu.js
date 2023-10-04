@@ -120,13 +120,16 @@ let foodArr = [39.95, 'no 1', '5 star', 'gluten free']
 */
 
 //CODE HERE
-const foodcyle = (cycle) => {
-    return cycle.length > foodArr.length
+const foodcyle = (food) => {
+for(let i = 0; i <= foodArr.length; i++)
+    if(foodArr <= food){
+        food.filter((elements) => elements.length > 4);
+    } 
 }
 
-const filteredFood = foodArr.filter(foodcyle)
+console.log(foodcyle(foodArr))
 
-    console.log(filteredFood)
+
 
 
 
@@ -172,6 +175,7 @@ const filteredFood = foodArr.filter(foodcyle)
 */
 
 //CODE HERE
+//I can grasp how to use function but when comes methods I can't figure how to activate them
 let filterByProperty = (property, number, type) => {
     return property = "rating, popularity or price";
     return number = number >= num;
@@ -189,3 +193,4 @@ let filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+console.log(filterByProperty('gluten free'));

@@ -22,9 +22,11 @@
 */
 
 //CODE HERE
-// const greetUser = (username) => username 
+const greetUser = (username) => `Welcome back, ${username}`;
 
-// console.log(greetUser('Welcome Back, Xavier'))
+let formalGreeting = greetUser('Xavier');
+console.log(formalGreeting);
+
 
 
 
@@ -49,18 +51,25 @@
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 //creating a function containing a conditional that provides delivery instructions
-// function canWeDeliver(zipcode){
-//     if (zipcode === deliveryAreaZipCodes.include(8))
-//     return 'You are eligible for delivery' 
-//     else if (zipcode !== zipcode.length){
-//     return 'Sorry, we can\'t deliver to that address'
-//     }
+let weCanDeliver = (zipCode) => {
+    for(let i = 0; i = deliveryAreaZipCodes.length; i++){
+        if (zipCode === deliveryAreaZipCodes[i]){
+            return `Sorry, we can't deliver to that address`
+     
+         } else {
+            return `You're in our delivery zone!`
+    
+         }
+    }
+}
 
-// }
+
+console.log(weCanDeliver(85204));
+
 
 
 
@@ -83,9 +92,13 @@
 */
 
 // CODE HERE
-// for (let i = 0; i < canWeDeliver.length; i++){
+let canWeDeliverTwo = (zipCode) => {
+ if (deliveryAreaZipCodes.includes(zipCode)){
+    deliveryAreaZipCodes.forEach((zipcodes) => console.log(`Good News we can deliver in this area, ${zipcodes}`));
+ }
+}
 
-// }
+canWeDeliverTwo(85204)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -121,8 +134,9 @@ const deals = [
 */
 
 //CODE HERE
-let newDeals = deals.replaceAll(/15/g, 10)
-console.log(newDeals)
+let {title} = deals;
+let discountedRate = title.replace(15, 10);
+console.log(discountedRate);
 
 
 /*

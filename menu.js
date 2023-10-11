@@ -175,14 +175,20 @@ console.log(foodcyle(foodArr))
 */
 
 //CODE HERE
-//I can grasp how to use function but when comes methods I can't figure how to activate them
-let filterByProperty = (property, number, type) => {
-    return property = "rating, popularity or price";
-    return number = number >= num;
-    return num = 7;
-    return type = type(above, below)
-    let filterItems = foodArr.filter()
+//I can grasp how to use function but when comes methods I can't figure how to activate the
+function filterByProperty(property, number, type){
+     if (property = '' && number === foodArr.length){
+        filteredProduct = foodArr.filter();
+    } else if (property.length >= type || property.length <= type){
+        filteredProduct = foodArr.filter();
+    }
 }
+
+filterByProperty('watermelon', 9.99, 'fruit');
+console.log(filteredProduct);
+
+// let foodArr = [39.95, 'no 1', '5 star', 'gluten free']
+
 
 
 /*

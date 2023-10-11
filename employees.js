@@ -25,7 +25,11 @@ class Employee{
         this.name = name;
         this.shifts = shifts;
     }
-    getSchedule = () => `${this.name} works on ${this.shifts}`;
+    getSchedule(name, shifts){
+    this.name = name;
+    this.shifts = shifts;
+    return (`Employee: ${this.name} works on ${this.shifts}`);
+    } 
     
     }
 
@@ -40,8 +44,8 @@ class Employee{
 */
 
 //CODE HERE
-let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
-// console.log(empOne);
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons');
+console.log(empOne);
 
 
 /*
@@ -50,7 +54,7 @@ let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 */
 
 //CODE HERE
-empOne.getSchedule('Rick', 'weekdays')
+empOne.getSchedule('rick', 'tuesday');
 
 
 
@@ -67,9 +71,8 @@ empOne.getSchedule('Rick', 'weekdays')
 */
 
 //CODE HERE
-let {...name} = empOne;
-empTwo = empOne;
-console.log(empTwo)
+let empTwo = {...empOne};
+console.log(`Hello, ${empTwo}`);
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a class called Manager that *extends* 
@@ -101,12 +104,21 @@ class Manager extends Employee{
         this.name = name;
         this.shifts = shifts;
         this.employees = employees;
-
-    getEmployees = () => console.log(`${this.name} manages ${this.employees}`);
-    addEmployee = (emp) => this.name.push(Manager(employees['']));
-
     }
+
+    getEmployees(name, employees){
+        this.name = name;
+        this.employees = employees;
+        console.log(`${this.name} manages ${this.employees}`);
+    }
+
+    addEmployee(emp, name){
+        this.emp = emp;
+        this.name = name;
+    }
+
 }
+
 
 
 /*
@@ -130,7 +142,7 @@ console.log(manager);
 */
 
 //CODE HERE
-manager.getEmployees()
+manager.getEmployees('Ron', 'Sara');
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -138,12 +150,12 @@ manager.getEmployees()
 */
 
 //CODE HERE 
-manager.addEmployee('Coach')
+// manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
     that an employee was added.
 */
 
-//CODE HERE
-manager.getEmployees('Coach')
+// //CODE HERE
+manager.addEmployee('Fred');

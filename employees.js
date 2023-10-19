@@ -72,6 +72,7 @@ empOne.getSchedule('rick', 'tuesday');
 
 //CODE HERE
 let empTwo = {...empOne};
+empTwo = {..."nick"};
 console.log(`Hello, ${empTwo}`);
 //////////////////PROBLEM 2////////////////////
 /*  
